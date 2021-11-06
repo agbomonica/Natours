@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     display: inline-block;
@@ -6,10 +7,12 @@
     text-decoration: none;
     font-size: $default-font-size;
     padding: 1.5rem 4rem;
-    border-radius: 10rem;
+    border-radius: $border-radius-lg;
     transition: all 0.2s;
-
     position: relative;
+
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -21,8 +24,9 @@
       opacity: 0;
     }
   }
-
+  &:focus,
   &:active {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
@@ -36,6 +40,14 @@
       background-color: $color-white;
     }
   }
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
 
   &::after {
     content: "";
@@ -43,7 +55,7 @@
     display: inline-block;
     width: 100%;
     height: 100%;
-    border-radius: 10rem;
+    border-radius: $border-radius-lg;
 
     position: absolute;
     top: 0;
