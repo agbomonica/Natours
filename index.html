@@ -39,7 +39,7 @@
             >
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
+            <a href="#section-tours" class="navigation__link"
               ><span>03</span>Popular tours</a
             >
           </li>
@@ -64,7 +64,9 @@
           <span class="heading-primary--sub">is where life happens</span>
         </h1>
 
-        <a href="#" class="btn btn--white btn--animated">Discover Our Tours</a>
+        <a href="#section-tours" class="btn btn--white btn--animated"
+          >Discover Our Tours</a
+        >
       </div>
     </header>
 
@@ -171,7 +173,7 @@
         </div>
       </section>
 
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-lg">
           <h2 class="heading-secondary">Most popular tours</h2>
         </div>
@@ -201,7 +203,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$300</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -232,7 +234,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$600</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -263,7 +265,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$900</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -445,5 +447,36 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="Tour image" class="popup__img" />
+          <img src="img/nat-9.jpg" alt="Tour image" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-sm">
+            Start booking now
+          </h2>
+          <h3 class="heading-tertiary u-margin-bottom-sm">
+            Important &mdash; please read the terms before booking
+          </h3>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+            voluptatum est reiciendis rerum facere totam dicta libero quia
+            doloremque numquam praesentium dolorem corrupti ab odit. Molestias
+            veniam, rem accusantium earum officia in sunt eum consequuntur
+            corporis dignissimos esse nesciunt, fugit ullam consequatur nam
+            excepturi placeat? Ducimus beatae aut perferendis quae nihil enim
+            autem tempore laudantium, blanditiis iure obcaecati, illum
+            aspernatur aliquam atque accusamus nostrum porro rerum ab! Molestiae
+            pariatur corporis magnam consectetur. Nisi, praesentium doloribus.
+            Illo cumque fugiat nam labore.
+          </p>
+          <a href="#" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
