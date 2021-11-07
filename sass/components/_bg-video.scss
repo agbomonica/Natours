@@ -11,7 +11,7 @@
   &__content {
     width: 100%;
     height: 100%;
-    // ensures video cover 100% of its parent width while maintaining aspect ratio
+    // ensures video cover 100% of its parent width while maintaining its aspect ratio
     object-fit: cover;
   }
 }
