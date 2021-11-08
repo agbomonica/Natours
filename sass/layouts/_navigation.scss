@@ -15,6 +15,16 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     cursor: pointer;
     text-align: center;
+
+    @include responsive(portrait-tablets) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include responsive(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -32,6 +42,16 @@
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
     // makes background cover the viewport
     // transform: scale(80);
+
+    @include responsive(portrait-tablets) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include responsive(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   // Main navigation
@@ -43,7 +63,9 @@
     z-index: 999;
     opacity: 0;
     // width: 100%;
-    // pointer-events: none;
+    pointer-events: none;
+    visibility: hidden;
+
     width: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
   }
@@ -52,6 +74,7 @@
     @include center-horizontal-vertical;
     text-align: center;
     list-style: none;
+    width: 100%;
   }
 
   &__item {
@@ -101,7 +124,8 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
-    // pointer-events: visible;
+    pointer-events: auto;
+    visibility: visible;
   }
 
   // ICON

@@ -4,9 +4,16 @@
   padding: 10rem 0;
   font-size: 1.4rem;
 
+  @include responsive(portrait-tablets) {
+    padding: 8rem 0;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+    @include responsive(portrait-tablets) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
@@ -19,6 +26,11 @@
     padding-top: 2rem;
     // border will not take more than the space it needs
     display: inline-block;
+
+    @include responsive(portrait-tablets) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -57,5 +69,10 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+
+    @include responsive(portrait-tablets) {
+      width: 100%;
+      float: none;
+    }
   }
 }

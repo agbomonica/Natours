@@ -12,3 +12,49 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERIES MANAGER
+/*
+    0 - 600px:      Mobile Phones
+    600 - 900px:    Portrait Tablets
+    900 - 1200px:   Landscape Tablets
+    1200 - 1800px:  Normal styles applies
+    1800+           Big Desktop
+    
+    ORDER: base + typography > general layout + grid > page layout > components
+*/
+
+/*
+Breakpoint arguements:
+- phone
+- portrait-tablets
+- landscape-tablets
+- big-desktops
+*/
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    // 600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == portrait-tablets {
+    // 900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == landscape-tablets {
+    // 1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktops {
+    //1800+
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
