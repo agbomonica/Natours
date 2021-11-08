@@ -7,6 +7,10 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
   transition: transform 0.3s;
 
+  @include responsive(portrait-tablets) {
+    padding: 2rem;
+  }
+
   &__icon {
     color: $color-primary;
     font-size: 6rem;
@@ -17,6 +21,10 @@
     );
     -webkit-background-clip: text;
     color: transparent;
+
+    @include responsive(portrait-tablets) {
+      margin-bottom: 2rem;
+    }
   }
 
   &:hover {

@@ -7,9 +7,28 @@
 }
 
 html {
+  // defines 1rem => 10px, 10/16 => 62.5%
   font-size: 62.5%;
+
+  @include responsive(landscape-tablets) {
+    font-size: 56.25%; // 1rem = 9px, 9/16 => 56.25%
+  }
+
+  // font settings for both mobile & portraits.
+  @include responsive(portrait-tablets) {
+    font-size: 50%; // 1rem = 8px, 8/16 => 50%
+  }
+
+  @include responsive(big-desktops) {
+    font-size: 75%; // 1rem = 12px, 12/16 => 75%
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include responsive(portrait-tablets) {
+    padding: 0;
+  }
 }
