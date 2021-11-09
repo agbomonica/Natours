@@ -22,11 +22,26 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s; // transition delay allows the .3s black popup fadein
+
+    @include responsive(portrait-tablets) {
+      display: block;
+    }
+
+    @include responsive(phone) {
+      width: 80%;
+    }
   }
 
   &__left {
     width: 33.3333333%;
     display: table-cell;
+
+    @include responsive(portrait-tablets) {
+      width: 100%;
+      display: block;
+      @include clearfix;
+      margin-bottom: 3rem;
+    }
   }
 
   &__right {
@@ -34,6 +49,12 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include responsive(portrait-tablets) {
+      width: 100%;
+      display: block;
+      padding: 2.5rem 3rem;
+    }
   }
 
   &__img {
@@ -55,6 +76,12 @@
     -ms-hyphens: auto;
 
     hyphens: auto;
+
+    @include responsive(portrait-tablets) {
+      column-count: 1;
+      column-gap: 0;
+      column-rule: none;
+    }
   }
 
   // OPEN STATES
