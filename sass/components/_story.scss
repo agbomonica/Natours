@@ -26,12 +26,20 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%); // radius, position
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
+
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+    overflow: hidden;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+
+      -webkit-shape-outside: circle(50% at 50% 50%); // radius, position
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
 
     @include responsive(phone) {
       transform: translateX(-3rem) skewX(0);
@@ -55,6 +63,8 @@
     text-align: center;
     opacity: 0;
     transition: all 0.4s;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
