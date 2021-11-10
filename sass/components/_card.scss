@@ -186,8 +186,10 @@
     font-weight: 100;
   }
 }
+// media query applies if device width <= 600px and a touch device
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  // @include responsive(portrait-tablets) {
 
-@include responsive(portrait-tablets) {
   // FUNCTIONALITY
   .card {
     height: auto;
